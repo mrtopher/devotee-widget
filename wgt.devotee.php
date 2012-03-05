@@ -76,17 +76,19 @@ class Wgt_devotee
 				$display = '<tr><td colspan="3"><center>No sales have been recorded yet.</center></td></tr>';
 			}
 			
-			return '
-				<table>
-					<thead><tr><th>Date</th><th>Item</th><th>Price</th></tr></thead>
-					<tbody>'.$display.'</tbody>
-				</table>
-			';
 		}
 		else
 		{
-			return '<p>Click settings icon to enter username/password.</p>';
+			$display = '<tr><td colspan="3"><center>Click settings icon to enter username/password.</center></td></tr>';
 		}
+
+		return '
+			<table>
+				<thead><tr><th>Date</th><th>Item</th><th>Price</th></tr></thead>
+				<tbody>'.$display.'</tbody>
+			</table>
+		';
+
 	}
 	
 	/**
