@@ -11,3 +11,7 @@ If you use the [dashEE ExpressionEngine module](https://github.com/mrtopher/dash
 `'wgt_devotee_description' => 'Display your devot:ee sales for the past 30 days.',`
 
 That's it. When you click the Widgets button from the dashboard you should now see the widget listed as an option.
+
+## Updating
+
+When updating the widget it is recommended that you first remove the widget from your dashboard, upload the updated widget file and then re-add the widget. If you don't do things in this order you may experience unexpected results. Once remedy may be to remove and re-add the widget once the updated file has been uploaded.
