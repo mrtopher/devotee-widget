@@ -26,8 +26,8 @@ class Wgt_devotee
 		$this->title = 'devot:ee Sales';
 	
 		$this->settings = array(
-			'username' => '',
-			'password' => ''
+			'api_key' => '',
+			'secret_key' => ''
 			);
 		$this->wclass = 'contentMenu';
 	}
@@ -42,10 +42,10 @@ class Wgt_devotee
 	 */
 	public function index($settings = NULL)
 	{
-		if($settings->username != '' AND $settings->password != '')
+		if($settings->api_key != '' AND $settings->secret_key != '')
 		{
 			// Create the post string
-			$post_string = "username=".$settings->username."&password=".$settings->password."&start_dt=".(date('Y-m-d')-30)."&end_dt=".date('Y-m-d');
+			$post_string = "api_key=".$settings->api_key."&secret_key=".$settings->secret_key."&start_dt=".(date('Y-m-d')-30)."&end_dt=".date('Y-m-d');
 			
 			// Process 	
 			$url = "https://devot-ee.com/api/orders";
@@ -79,7 +79,7 @@ class Wgt_devotee
 		}
 		else
 		{
-			$display = '<tr><td colspan="3"><center>Click settings icon to enter username/password.</center></td></tr>';
+			$display = '<tr><td colspan="3"><center>Click settings icon to enter API credentials.</center></td></tr>';
 		}
 
 		return '
@@ -101,12 +101,14 @@ class Wgt_devotee
 	public function settings_form($settings)
 	{
 		return form_open('', array('class' => 'dashForm')).'
+		
+			<p>These values are found on your devot:ee profile page.</p>
 			
-			<p><label for="username">Username:</label>
-			<input type="text" name="username" value="'.$settings->username.'" /></p>
+			<p><label for="api_key">API Key:</label>
+			<input type="text" name="api_key" value="'.$settings->api_key.'" /></p>
 			
-			<p><label for="password">Password:</label>
-			<input type="password" name="password" value="'.$settings->password.'" /></p>
+			<p><label for="secret_key">Secret Key:</label>
+			<input type="text" name="secret_key" value="'.$settings->secret_key.'" /></p>
 			
 			<p><input type="submit" value="Save" /></p>
 			
