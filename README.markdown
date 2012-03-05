@@ -14,4 +14,4 @@ That's it. When you click the Widgets button from the dashboard you should now s
 
 ## Updating
 
-When updating the widget it is recommended that you first remove the widget from your dashboard, upload the updated widget file and then re-add the widget. If you don't do things in this order you may experience unexpected results. Once remedy may be to remove and re-add the widget once the updated file has been uploaded.
+When updating the widget it is recommended that you first remove the widget from your dashboard, upload the updated widget file and then re-add the widget. If you don't do things in this order you may experience unexpected results. One remedy may be to remove and re-add the widget once the updated file has been uploaded.
