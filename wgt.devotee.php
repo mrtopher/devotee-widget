@@ -14,6 +14,9 @@
 
 class Wgt_devotee
 {
+	public $widget_name 		= 'devot:ee Sales';
+	public $widget_description 	= 'Display your devot:ee sales for the past 30 days.';
+
 	public $title;
 	public $wclass;
 	public $settings;
@@ -26,8 +29,8 @@ class Wgt_devotee
 		$this->title = 'devot:ee Sales';
 	
 		$this->settings = array(
-			'api_key' => '',
-			'secret_key' => ''
+			'api_key' 		=> '',
+			'secret_key' 	=> ''
 			);
 		$this->wclass = 'contentMenu';
 	}
